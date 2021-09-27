@@ -1,0 +1,16 @@
+<div class='' >
+	<h1 class='font-class' > {{ title }} </h1>
+	<button ng-click='someClickTest()'>Hit Me</button>
+</div>
+
+<br>
+
+<h3>Blog List</h3>
+<ul ng-if='posts.length > 0'>
+	<li ng-repeat='post in posts'>
+		<a ng-href="/blog/{{post.id}}">
+		{{post.title}}
+		</a>
+	</li>		
+</ul>
+<h4 ng-if="posts.length == 0">No Post Yet</h4>
